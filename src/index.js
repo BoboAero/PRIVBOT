@@ -13,7 +13,18 @@ const client = new Client({
 client.on('ready', (c) => {
     console.log(`[index.js] ✅ ${c.user.tag} is online.`)
 })
+client.on('interactionCreate', (interaction) => {
+    if (!interaction.isChatInputCommand()){return};
+    if (interaction.commandName == "ping"){
+        interaction.reply("pong")
+    }
 
+    if (interaction.commandName == "return"){
+        const msg = interaction.options.get('message').value;
+        const user = interaction.user.username;
+        interaction.reply(`${user} returned: ${msg}`)
+    }
+})
 
 client.login(process.env.TOKEN);
 
