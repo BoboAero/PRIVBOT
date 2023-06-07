@@ -19,6 +19,11 @@ client.on('interactionCreate', (interaction) => {
         interaction.reply("pong")
     }
 
+    if (interaction.commandName == "ietsgays"){
+        const user = interaction.user.username;
+        interaction.reply(`${user} jij bent echt kkr gay`)
+    }
+
     if (interaction.commandName == "return"){
         const msg = interaction.options.get('message').value;
         const user = interaction.user.username;

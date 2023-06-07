@@ -17,6 +17,10 @@ const commands = [
     {
         name: 'ping',
         description: 'Returns pong'
+    },
+    {
+        name: 'ietsgays',
+        description: 'weetnie pepijn wou iets gays'
     }
 ];
 
